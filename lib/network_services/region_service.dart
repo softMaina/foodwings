@@ -1,0 +1,34 @@
+import 'package:FoodWings/network_services/network_handler.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:http/http.dart' as http;
+
+import '../models/misc/error_message.dart';
+import '../models/regions/region_model.dart';
+
+class ReigionService {
+  static var client = http.Client();
+  static GetStorage store = GetStorage();
+  static String auth = store.read("auth");
+
+  static Future fetchRegionsService() async {
+    var url = NetWorkHandler.buildUrl("static-data/region");
+
+    Map<String, String> headers = {
+      "Content-type": "application/json",
+      'Accept': 'application/json',
+      'AUTH': 'blhGVzMwcWFLOFRrUUJXdTZZN0JXMklKRG1VSEhuTFU3OGxMeVE4S2pQaEx3OHBuQ00yU1FyeU5DQmdXWFdGWkdPV3Q2ays2L0JDd21HQzVlemJHM2Yyb0g4STNtWkcvUzFKZ1ZVaytIczU5cm5TUTFtL0d5Yk5YMCs2V1FsTmY3T3BxN1Z4Sm8vVDJxZGZkcE1uWjA3ZUF3T1Z4SkI4Um5kQjlKWit5WllsYlNjOUp3MHRMWGs4aVIxTGRuWXJRSXN4bVhxbk5MWHJPeUM3VkRzb0VSamRFdE9XbE5rdndqK3FGVjNiOE1xMUtJWDFKL1pjT1JDWER1bUhRN3Awaw',
+    };
+    var response = await client.post(url, headers: headers);
+    var jsonString = response.body;
+    if (response.statusCode == 200) {
+      void storeRegionModel(List<RegionsModel> model) {
+        store.write('RegionModel', model.toList());
+      }
+      return [regionsModelFromJson(jsonString), response.statusCode];
+    } else {
+      Get.snackbar("Error", jsonString.toString());
+      return [erroMessageFromJson(jsonString), response.statusCode];
+    }
+  }
+}

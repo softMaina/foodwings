@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "589069166398",
+    "project_id": "FoodWings-app-339906",
+    "storage_bucket": "FoodWings-app-339906.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589069166398:android:d397d2047745b9aa7eee6f",
+        "android_client_info": {
+          "package_name": "com.foodwings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589069166398-78va7gpjvr5djf0du3ipt49hp5bjjl5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foodwings",
+            "certificate_hash": "5c7bc5cac9c1995e031002995986e2fae1b108e9"
+          }
+        },
+        {
+          "client_id": "589069166398-vg5ftf6p713ik36flvri1pr357djbg4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzSXQrxi_1RDY4Zsms_7Z5iDuar06rOZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589069166398-vg5ftf6p713ik36flvri1pr357djbg4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

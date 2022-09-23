@@ -1,0 +1,7 @@
+class Secrets {
+  static const API_KEY = "AIzaSyC7eti0eRZVF0BtrALt3UfxFNO57FouFG0";
+  static const AUTH =
+      "blhGVzMwcWFLOFRrUUJXdTZZN0JXMklKRG1VSEhuTFU3OGxMeVE4S2pQaEx3OHBuQ00yU1FyeU5DQmdXWFdGWnVSdU9BdWJsQWwwMC90aFB3aUJJai84RklTTVlTOVFJYmlNdXJ4M09EZlg3MXdnZzE1MFhmU2V2NENUbSt6bHZHWHNYVi9MK00wbGJSajREVGhvdUxsK3VrYXo0YlBlMnFTYUZnWGRLNXV6ZW5TUjZrLzg2RlNqWmNMUGJmeTJoWklqck1pVmdINWxLL0xuNXJTYmpWdz09";
+  static const districtId = 20;
+  static const farmer_id = 7;
+}
